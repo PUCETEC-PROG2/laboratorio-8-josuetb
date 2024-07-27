@@ -18,9 +18,11 @@
                 <img src="{{pokemon.picture.url}}" alt="" >
                 <div class="card_body">
                     <h5 class="card-tittle">{{pokemon}}</h5>
-                    <p class="card-text">Entrenador: {{pokemon.trainer}}</p>
-                    <p class="card-text">Peso: {{pokemon.weight}}</p>
-                    <a href="pokemon/{{pokemon.id}}" class="btn btn-primary">Detalles</a>
+                    <p class="card-text">Entrenador Pokemon: {{pokemon.trainer}}</p>
+                    <p class="card-text">Peso del Pokemon: {{pokemon.weight}}</p>
+                    <a href="pokemon/{{pokemon.id}}" class="btn btn-primary"><i class="fa-solid fa-pencil"></i></a>
+                    <a href ="edit_pokemon/{{ pokemon.id }}" class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></a>  
+                    <a href ="delete_pokemon/{{ pokemon.id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>       
                 </div>
             </div>
         {% endfor %}
