@@ -1,11 +1,11 @@
 {% extends "base.html" %}
-{% block title %}login{% endblock title %}
+{% block title %}Login{% endblock title %}
 {% block content %}
 <div class="row d-flex justify-content-center">
-    <div class="col-md-6"> 
-        <h2>Inicio de sesion</h2>
-        <form action=""method = "post">
-            {% csf_token %}
+    <div class="col-md-6">
+        <h2>Inicio de sesión</h2>
+        <form action="{% url 'pokedex:login' %}" method="post">
+            {% csrf_token %}
             <div>
                 <label for="username">Usuario:</label>
                 <input type="text" name="username" id="username" required>
@@ -14,9 +14,9 @@
                 <label for="password">Contraseña:</label>
                 <input type="password" name="password" id="password" required>
             </div>
-            </div>
-
+            <button type="submit" class="btn btn-primary">Ingresar</button>
         </form>
     </div>
+
 </div>
-    {% endblock content %}
+{% endblock content %}
