@@ -9,12 +9,12 @@
     <p>{{ pokemon.type }}</p>
 </li>
 {% endfor %}
-</ul> {% endcomment %}
-<a href="{% url "pokedex:add_pokemon" %}">Agregar pokemon</a>
+</ul> 
+<a href="{% url "pokedex:add_pokemon" %}">Agregar pokemon</a> {% endcomment %}
 <div class="card-group">
     {% for pokemon in pokemons %}
-        <div class="card">
-            <img src="{{ pokemon.picture.url }}" alt="" width="100%" height="100%">
+        <div class="card" style="max-width: 300px;">
+            <img src="{{ pokemon.picture.url }}" alt="" >
             <div class="car-body">
                 <h5 class="card-tittle">{{ pokemon }}</h5>
                 <p class="card-text">Entrenador: {{ pokemon.trainer }}</p>
