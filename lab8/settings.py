@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pokedex'
+    'pokedex',
 ]
 
 MIDDLEWARE = [
@@ -80,10 +80,10 @@ DATABASES = {
         'NAME': 'pokedex_josuet',
         'HOST': 'localhost',
         'PORT': '5432',
-        'USER': 'josuetb',
-        'PASSWORD': '1753'
+        'USER': 'postgres',
+        'PASSWORD': '1753'      
         
-   }
+    }
 }
 
 
@@ -123,17 +123,16 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-#Media files
-
+#Media files 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR/ 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#Configuracion de autentificación
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+#Configuraciones de autenticación
+LOGIN_REDIRECT_URL ='/'
+LOGOUT_REDIRECT_URL ='/'
 LOGIN_URL = 'pokedex:login'
